@@ -1,0 +1,28 @@
+{
+  "name": "backgen",
+  "version": "0.0.2",
+  "description": "Backend generator for express applications",
+  "main": "cli.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wagnerperin/backgen.git"
+  },
+  "keywords": [
+    "generator",
+    "cli",
+    "express",
+    "node"
+  ],
+  "author": "Wagner Perin <wagner.perin@ufes.br> (http://sead.ufes.br)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wagnerperin/backgen/issues"
+  },
+  "homepage": "https://github.com/wagnerperin/backgen#readme",
+  "bin": {
+    "say-hello": "./cli.js"
+  }
+}
