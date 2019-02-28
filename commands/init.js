@@ -66,6 +66,12 @@ module.exports = () => {
                 fs.writeFileSync('package.json', JSON.stringify(answers, null, 2));
                 fs.copyFileSync(path.join(require.main.filename,'../references/index.js'), './index.js');
                 fs.mkdirSync(path.join(process.cwd(),'config'));
+                fs.mkdirSync(path.join(process.cwd(),'app'));
+                fs.mkdirSync(path.join(process.cwd(),'app/api'));
+                fs.mkdirSync(path.join(process.cwd(),'app/models'));
+                fs.mkdirSync(path.join(process.cwd(),'app/routes'));
+                fs.mkdirSync(path.join(process.cwd(),'app/errors'));
+                fs.mkdirSync(path.join(process.cwd(),'app/swagger'));
                 fs.copyFileSync(path.join(require.main.filename,'../references/config/express.js'), './config/express.js');
             });
 
