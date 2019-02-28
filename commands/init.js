@@ -4,6 +4,8 @@ module.exports = () => {
     const inquirer = require('inquirer');
     const fs = require('fs');
     const path = require('path');
+    const dependencies = require('../core/dependencies.json');
+    const devDependencies = require('../core/devDependencies.json');
     let dir = process.cwd().split(path.sep);
 
     let questions = [
@@ -52,9 +54,9 @@ module.exports = () => {
                 answers.scripts = {
                     start: "node index.js"
                 };
-                answers.dependencies = {
-                    "express": "^4.16.4"
-                };
+                answers.dependencies = dependencies;
+                answers.devDependencies = devDependencies;
+
                 if(argv.dir !== ".") 
                     if(fs.existsSync(path.join(process.cwd(), argv.dir))) console.log('Can\'t create this project, this folder name already exists.');
                     else { 
