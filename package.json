@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "inquirer": "^6.2.2",
+    "ncp": "^2.0.0",
     "yargs": "^13.2.1"
   }
 }

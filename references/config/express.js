@@ -1,5 +1,6 @@
 const app = require('express')();
+const bodyParser = require('body-parser');
+const consign = require('consign');
 
-app.set('port', process.env.PORT || 3000);
 
 module.exports = app;
