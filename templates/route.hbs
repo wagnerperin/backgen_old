@@ -1,0 +1,10 @@
+module.exports = app => {
+    const api = app.api.{{name}};
+    {{#if authenticationRequired}}
+    const authApi = app.api.auth;
+    {{/if}}
+
+    app.route(app.get('{{name}}ApiRoute'))
+        .post({{#if create.authenticationRequired}}authApi.authenticationRequired, {{/if}}{{#if create.method}}api.{{create.method}}{{else}}api.create{{/if}});
+
+}
